@@ -94,17 +94,17 @@ img {
 
 
 
-/*=============== THEME ===============*/
-/*========== Variables Dark theme ==========*/
+/*=============== WEBSITE THEME  ===============*/
+/*========== DARK THEME VARIABLE ==========*/
 
 
 /*========== 
 	Color changes in some parts of 
-	the website, in dark theme
+	the website, in dark theme WEBSITE
 ==========*/
 
 
-/*=============== REUSABLE CSS CLASSES ===============*/
+/*=============== WEBSITE REUSABLE CSS CLASSES ===============*/
 .container {
   max-width: 1120px;
   margin-inline: 1.5rem;
@@ -133,7 +133,7 @@ img {
   overflow: hidden;
 }
 
-/*=============== HEADER & NAV ===============*/
+/*=============== WEBSITE HEADER & NAV ===============*/
 .header{
   position:fixed;
   width: 100%;
@@ -192,7 +192,7 @@ img {
 
 }
 
-/* Navigation for mobile devices */
+/* Website Navigation for mobile devices */
 @media screen and (max-width: 1150px) {
 .nav__menu{
   position: fixed;
@@ -258,7 +258,7 @@ img {
 /* Active link */
 
 
-/*=============== BUTTON ===============*/
+/*=============== Website BUTTON ===============*/
 .button{
   display: inline-flex;
   background-color: var(--first-color);
@@ -287,7 +287,7 @@ img {
   gap: 5rem;
   overflow: hidden;
   
-  /* === INCREASE SIZE HERE === */
+  /* === Website INCREASE SIZE HERE === */
   padding:.25rem 1rem;    /* Increased from typical 1rem 2rem → larger button */
   font-size: 1.25rem;        /* Bigger text (optional but recommended) */
   font-weight: 600;           /* Makes text bolder for better visibility */
@@ -324,7 +324,7 @@ img {
 
 
 
-/*=============== HOME ===============*/
+/*=============== Website HOME ===============*/
 .home__container{
   display: grid;
   grid-template-columns: 1fr;
@@ -421,7 +421,7 @@ img {
 }
 
 
-/*=============== DELIVERY ===============*/
+/*=============== Website DELIVERY ===============*/
 .delivery__container{
   display: grid;
   grid-template-columns: 1fr;
@@ -522,34 +522,34 @@ img {
 
 
 
-/*=============== ABOUT ===============*/
+/*=============== WEBSITE ABOUT ===============*/
 
 
-/*=============== PRICES ===============*/
+/*=============== WEBSITE PRICES ===============*/
 
 
 /* Swiper class */
 
 
-/*=============== GALLERY ===============*/
+/*=============== WEBSITE GALLERY ===============*/
 
 
-/*=============== CONTACT ===============*/
+/*===============WEBSITE  CONTACT ===============*/
 
 
-/*=============== FOOTER ===============*/
+/*=============== WEBSITE FOOTER ===============*/
 
 
-/*=============== SCROLL BAR ===============*/
+/*=============== WEBSITE SCROLL BAR ===============*/
 
 
-/*=============== SCROLL UP ===============*/
+/*=============== WEBSITE SCROLL UP ===============*/
 
 
-/* Show Scroll Up */
+/*  WEBSITE Show Scroll Up */
 
 
-/*=============== BREAKPOINTS ===============*/
+/*===============  WEBSITE BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (max-width: 1150px){
   .home__title{
@@ -567,7 +567,7 @@ img {
 
 
 
-/* * Base mobile view **/
+/* * Website Base mobile view **/
 /* Mobile-first base styles */
 .nav__menu {
   /* mobile menu styles, e.g., fixed position, background, shadow */

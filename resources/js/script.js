@@ -2,7 +2,7 @@ const navMenu = document.getElementById('nav-menu');
 const navToggle = document.getElementById('nav-toggle');
 const navClose = document.getElementById('nav-close');
 
-/*===== MENU SHOW =====*/
+/*===== WEBSITE MENU SHOW =====*/
 if (navToggle) {
     navToggle.addEventListener('click', () => {
         navMenu.classList.add('show-menu');
@@ -11,7 +11,7 @@ if (navToggle) {
     });
 }
 
-/*===== MENU HIDDEN =====*/
+/*===== WEBSITE MENU HIDDEN =====*/
 if (navClose) {
     navClose.addEventListener('click', () => {
         navMenu.classList.remove('show-menu');
@@ -36,7 +36,7 @@ navLinks.forEach(link => {
 
 
 
-/*=============== SHOW MENU ===============*/
+/*=============== WEBSITE SHOW MENU ===============*/
 
 
 /*=============== REMOVE MENU MOBILE ===============*/
@@ -52,17 +52,17 @@ const shadowHeader = () => {
 }
 window.addEventListener('scroll', shadowHeader)
 
-/*=============== SWIPER PRICES ===============*/
+/*===============  WEBSITE SWIPER PRICES ===============*/
 
 
-/*=============== SHOW SCROLL UP ===============*/ 
+/*=============== WEBSITE SHOW SCROLL UP ===============*/ 
 
 
-/*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
+/*=============== WEBSITE SCROLL SECTIONS ACTIVE LINK ===============*/
 
 
-/*=============== DARK LIGHT THEME ===============*/ 
+/*=============== WEBSITE DARK LIGHT THEME ===============*/ 
 
 
-/*=============== SCROLL REVEAL ANIMATION ===============*/
+/*=============== WEBSITE SCROLL REVEAL ANIMATION ===============*/
 
