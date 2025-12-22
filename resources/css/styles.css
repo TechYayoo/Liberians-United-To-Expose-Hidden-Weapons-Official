@@ -1,0 +1,783 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(152, 94%, 45%);
+  --first-color-alt: hsl(140, 100%, 40%);
+  --second-color: hsl(152, 87%, 39%);
+  --title-color: hsl(218, 48%, 22%);
+  --text-color: hsl(218, 8%, 36%);
+  --text-color-light: hsl(218, 8%, 54%);
+  --white-color: hsl(218, 100%, 98%);
+  --white-color-light: hsl(218, 48%, 80%);
+  --dark-color: hsl(152, 80%, 35%);
+  --gray-color: hsl(0, 0%, 92%);
+  --body-color: hsl(0, 0%, 100%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Montserrat", sans-serif;
+  --biggest-font-size: 2.25rem;
+  --bigger-font-size: 1.75rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1150px) {
+  :root {
+    --biggest-font-size: 3.5rem;
+    --bigger-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+  transition: background-color .4s;
+}
+
+h1, h2, h3, h4 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
+/*=============== THEME ===============*/
+/*========== Variables Dark theme ==========*/
+
+
+/*========== 
+	Color changes in some parts of 
+	the website, in dark theme
+==========*/
+
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 1120px;
+  margin-inline: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section {
+  padding-block: 5rem 1rem;
+}
+
+.section__title {
+  text-align: center;
+  font-size: var(--bigger-font-size);
+  margin-bottom: 1rem;
+}
+
+.section__title span {
+  font-weight: var(--font-regular);
+}
+
+.main {
+  overflow: hidden;
+}
+
+/*=============== HEADER & NAV ===============*/
+.header{
+  position:fixed;
+  width: 100%;
+  top:0;
+  left:0;
+  background: var(--body-color);
+  box-shadow:0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: var(--z-fixed);
+  transition: background-color .4s, box-shadow .4s;
+}
+
+.nav{
+  /*position:relative; */
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo{
+  display:flex;
+  align-items: center;
+  column-gap: 25rem;
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  transition:color .4s;
+}
+
+.nav__logo i{
+  font-weight: initial;
+  font-size:1.5rem;
+  /* color: var(--first-color); */
+
+}
+
+ .nav__logo:hover {
+  color: var(--first-color);
+  
+} 
+
+.nav__toggle,
+.nav__close,
+.nav__theme{
+  display: inline-flex;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--title-color);
+  transition: color .4s;
+
+}
+
+.nav__buttons{
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+
+}
+
+/* Navigation for mobile devices */
+@media screen and (max-width: 1150px) {
+.nav__menu{
+  position: fixed;
+  top: -120%;
+  left:0;
+  right:-100%;
+  width:100%;
+  background-color: var(--body-color);
+  box-shadow: 0 4px 16px hsla(218,68%,18%,.1);
+  padding-block: 5rem;
+  transition: .4s;
+ 
+}
+
+}
+.nav__menu.show-menu{
+  right: 0;
+}
+
+.nav__list{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  color: var(--title-color);
+  transition:color .4s;
+  row-gap: 1.5rem;
+  
+}
+
+.nav__link{
+  font-weight: var(--font-semi-bold);
+  color:var(--title-color);
+  transition: color .4s;
+
+}
+
+.nav__link:hover {
+  color: var(--first-color);
+
+}
+
+.nav__close{
+  position:absolute;
+  top: 1.5em;
+  right: 1.5rem;
+  cursor: pointer;
+  color: var(--text-color);
+
+  
+}
+
+
+/* Show menu */
+.show-menu{
+  top:0;
+}
+
+
+/* Add shadow header */
+.shadow-header{
+  box-shadow: 0 2px 16px hsla(218, 68%, 18%, .1);
+}
+/* Active link */
+
+
+/*=============== BUTTON ===============*/
+.button{
+  display: inline-flex;
+  background-color: var(--first-color);
+  color:var(--white-color);
+  font-weight: var(--font-semi-bold);
+  padding: 1rem 2rem;
+  border-radius:5rem;
+  box-shadow: 0 4px 16px hsla(218, 94%, 45%, .3);
+  transition:background-color .4s;
+  margin-bottom: 2rem;
+}
+.button:hover{
+  background-color: var(--first-color);
+}
+
+.button-dark {
+  position: relative;
+  background: 
+    linear-gradient(to bottom, var(--second-color) 0%, var(--dark-color) 25%),
+    linear-gradient(to bottom, var(--dark-color), var(--dark-color));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  border: 4px solid transparent;
+  border-radius: 0.75rem;
+  display: flex;
+  gap: 5rem;
+  overflow: hidden;
+  
+  /* === INCREASE SIZE HERE === */
+  padding:.25rem 1rem;    /* Increased from typical 1rem 2rem → larger button */
+  font-size: 1.25rem;        /* Bigger text (optional but recommended) */
+  font-weight: 600;           /* Makes text bolder for better visibility */
+  
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;      /* Ensures padding works properly */
+  text-align: center;
+}
+
+.button-dark::after{
+  content:"";
+  width: 20px;
+  height: 20px;
+  background-color: var(--second-color);
+  border-radius: 50%;
+  position:absolute;
+  top: -0.5rem;
+  right: -.5rem;
+  filter: blur(26px);
+}
+
+.button-dark i{
+  font-size: 1.5rem;
+  transition: transform .4s;
+}
+.button-dark:hover i{
+  transform: translateX(.25rem);
+}
+
+
+
+
+
+
+/*=============== HOME ===============*/
+.home__container{
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 3rem;
+  align-items: center;
+  text-align: center;
+}
+
+.home__data{
+  text-align: center;
+}
+
+.home__title{
+  font-size: var(--bigger-font-size);
+  margin-bottom: 1rem;
+}
+
+.home__title span{
+  font-weight:var(--font-regular);
+}
+
+.home__description{
+  margin-bottom: 2rem;
+}
+
+.home__content {
+  background-color: var(--first-color);
+  padding: 3rem 1.5rem 0 1rem;
+  border-radius: 4rem;
+  box-shadow: 0 8px 16px hsla(218, 94%, 45%, 0.2); /* Fixed: added comma before opacity */
+  row-gap: 2rem;
+  display: grid;
+  justify-self: center;
+  width: 100%;
+  min-width:530;
+  margin:0 auto;
+  box-sizing: border-box;
+  
+
+}
+
+.home__infos{
+   display: flex;
+   justify-content: space-between;
+   gap:0.75rem;
+
+}
+.home__name{
+  font-size: var(--h2-font-size);
+  color:var(--white-color);
+  margin-bottom: 0.5rem;
+}
+
+.home__profession{
+  font: var(--small-font-size);
+  font-weight: var(--font-regular);
+  color:var(--white-color);
+  margin-bottom: 2rem;
+}
+.home__icon{
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+
+}
+.home__box{
+  background-color: var(--first-color-alt);
+  color: var(--white-color);
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items:center;
+  border-radius: 0.75rem;
+  font-size: 2rem;
+}
+.home__button{
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  padding:4rem 1rem;
+}
+
+.home__button i{
+  font-weight: normal;
+  font-size: 2rem;
+}
+.home__img{
+  width:330px;
+  min-width:100%;
+  height: auto;
+  justify-self:center;
+  filter: drop-shadow(0 0 16px hsla(218, 68%, 18%,  0.3));
+  
+}
+
+
+/*=============== DELIVERY ===============*/
+.delivery__container{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+
+
+}
+.delivery__data{
+  overflow: hidden;
+}
+.delivery__description{
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.delivery__info{
+  display: grid;
+  grid-template-columns: repeat(3, 140px);
+  column-gap: 2.5rem;
+  overflow: auto;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+.delivery__info::-webkit-scrollbar{
+  background-color: var(--gray-color);
+  height:4px;
+
+  border-radius: 1rem;
+}
+.delivery__info::-webkit-scrollbar-thumb{
+  background-color: var(--first-color);
+  border-radius: 1rem;
+}
+/* .delivery__info {
+  scrollbar-width: thin;
+  scrollbar-color: #888 var(--gray-color);
+} */
+.delivery__icon{
+  width:48px;
+  height:48px;
+  background-color: var(--first-color);
+  color: var(--white-color);
+  border-radius: 1rem;
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+  margin-bottom: .5rem;
+  transition: border-color .4s;
+}
+.delivery__subtile{
+  font-size: var(--h3-font-size);
+  margin-bottom: .5rem;
+}
+.delivery__content{
+  width:250px;
+  background-color: var(--first-color);
+  padding-block: 3rem 2rem;
+  border-radius: 2rem;
+  text-align: center;
+  justify-self: center;
+  box-shadow: 0 8px 16px hsla(218, 94%, 45%, 0.2);
+}
+.delivery__title{
+  font-size: var(--h1-font-size);
+  color:var(--white-color);
+  margin-bottom: 1.5rem;
+}
+.delivery__patients{
+  background-color: var(--first-color-alt);
+  color:var(--white-color);
+  padding: 1rem 2rem;
+  border-radius: .75rem;
+  display:contents;
+  column-gap: .5rem;
+}
+.delivery__patients span{
+  font-weight:var(--font-semi-bold);
+
+}
+.delivery__image{
+  position:relative;
+  width:100%;
+  height: 300px;
+  margin-bottom: 2rem;
+  display: grid;
+}
+.delivery__img{
+  position: absolute;
+  max-width: initial;
+  width:600px;
+  justify-self: center;
+  filter:drop-shadow(0 16px 24px hsla(218, 68%, 18%, .6))
+}
+
+
+
+
+
+
+
+/*=============== ABOUT ===============*/
+
+
+/*=============== PRICES ===============*/
+
+
+/* Swiper class */
+
+
+/*=============== GALLERY ===============*/
+
+
+/*=============== CONTACT ===============*/
+
+
+/*=============== FOOTER ===============*/
+
+
+/*=============== SCROLL BAR ===============*/
+
+
+/*=============== SCROLL UP ===============*/
+
+
+/* Show Scroll Up */
+
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 1150px){
+  .home__title{
+    font-size: 1.8rem;
+  }
+  .home__icon{
+    flex-direction: column;
+  }
+  .delivery__image{
+    width:270px;
+  }
+  
+}
+
+
+
+
+/* * Base mobile view **/
+/* Mobile-first base styles */
+.nav__menu {
+  /* mobile menu styles, e.g., fixed position, background, shadow */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav__list {
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.nav__toggle {
+  display: block; /* or flex */
+}
+
+.nav__close {
+  display: block;
+}
+
+
+/* For medium devices */
+@media screen and (min-width: 440px) {
+  .home__containter,
+  .delivery__container
+  {
+    grid-template-columns: 350px;
+    justify-content: center;
+  }
+
+  
+}
+
+@media screen and (min-width: 768px) {
+  .home__container { /* Fixed: typo "containter" → "container" */
+    display: grid; /* Added: essential – grid properties won't work without this */
+    grid-template-columns: repeat(2, 350px);
+    text-align:center;
+    justify-content: center; /* Optional but recommended: centers the grid if total width < viewport */
+    row-gap: 2rem;
+  }
+
+  .home__data {
+     /* Fixed: added space around / for clarity */
+    text-align: inherit;
+  }
+
+  .home__content {
+    grid-column: 1/ 3; /* Spans both columns */
+    grid-row: 2 / 3;
+    width: 900px;;
+    display: grid; /* Added: required for child grid-template-columns to work */
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem; /* Suggested: add horizontal spacing between the two columns */
+    padding: 0 5rem;
+  }
+
+  .home__infos { /* Assuming this is a plural or specific class – confirm it matches your HTML */
+    order: 1; /* Works only if .home__content uses flex or grid with order support */
+    padding-block: 2rem;
+  }
+
+  .home__image {
+    position: relative;
+  }
+
+  .home__img {
+    position: absolute;
+    bottom: 0;
+    width: 500px;
+    left: 50%; /* Suggested: centers the image horizontally */
+    transform: translateX(-50%); /* Perfect centering */
+  
+  }
+ .delivery__container{
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+ }
+ .delivery__container .section__title,
+ .delivery__data .delivery__description{
+  text-align: center;
+ }
+
+
+
+}
+
+
+/* For large devices */
+@media screen and (min-width: 1150px) {
+  .container {
+    margin-inline: auto;
+  }
+
+  .section {
+    padding-block: 7rem 2rem;
+  }
+
+  .section__title {
+    margin-bottom: 1.5rem;
+   
+
+  }
+
+  .nav {
+    height: calc(var(--header-height) + 2rem);
+    padding-inline: 3rem;
+  }
+
+  .nav__toggle,
+  .nav__close {
+    display: none;
+  }
+  .nav__menu{
+    padding: static;
+    width:auto;
+    height: auto;
+    background: transparent;
+    box-shadow: transparent;
+    padding:0;
+    right:auto;
+  }
+
+  .nav__list {
+    flex-direction: row;
+    column-gap: 4rem;
+  }
+  .nav__link{
+    font-size: 1.1rem;
+  }
+
+  .button-dark {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  
+
+}
+ /* .dark-theme .nav__menu {
+    box-shadow: none;
+  } */
+  
+  /*Some change gonna be made to this code in the near future*/
+  .home__container{
+    grid-template-columns: repeat(2, 1fr);
+    gap:3rem;
+    padding-top:4rem;
+  }
+  .home__title{
+    margin-bottom: 1.5rem;
+
+  }
+  .home__description{
+    padding-right: 10rem;
+    margin-bottom: 3rem;
+  }
+
+.home__content{
+  column-gap: 3rem;
+}
+.home__image{
+  width:440px;
+}
+.home__infos{
+  padding-block: 3rem;
+}
+.home__name{
+  font-size: var(--h1-font-size);
+}
+.home__profession{
+  font-size: var(--normal-font-size);
+  margin-bottom: 3rem;
+}
+.home__box{
+  width: 80px;
+  height: 80px;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+.home__button{
+  padding:2rem 3rem;
+  border-radius: 2rem;
+}
+.delivery__container{
+  grid-template-columns: 330px 450px;
+  row-gap: 10rem;
+}
+.delivery__content{
+  width:280px;
+  padding-block:4rem 3rem;
+}
+.delivery__title{
+  font-size: var(--h1-font-size);
+}
+.delivery__image{
+  margin-bottom: 1rem;
+}
+.delivery__img{
+  width:680px;
+}
+  
+}
+
+@media screen and (min-width: 968px) {
+  .delivery__container{
+    order: 2;
+
+  }
+  .delivery__content{
+    order: 1;
+  }
+}
+
+
+/* For 2K resolutions (2048 x 1152, 2048 x 1536) */
