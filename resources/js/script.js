@@ -53,7 +53,35 @@ const shadowHeader = () => {
 window.addEventListener('scroll', shadowHeader)
 
 /*===============  WEBSITE SWIPER PRICES ===============*/
+const swiperPrices = new Swiper('.prices__swiper', {
+  // Optional parameters
+  loop: true,
+  grabCursor: true,
+  spaceBetween: 24,
 
+  // Pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+
+  // Autoplay
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+
+  // Navigation arrows (uncomment if needed)
+  // navigation: {
+  //   nextEl: '.swiper-button-next',
+  //   prevEl: '.swiper-button-prev',
+  // },
+
+  // Scrollbar (uncomment if needed)
+  // scrollbar: {
+  //   el: '.swiper-scrollbar',
+  // },
+});
 
 /*=============== WEBSITE SHOW SCROLL UP ===============*/ 
 
