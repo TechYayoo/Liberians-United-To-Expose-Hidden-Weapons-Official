@@ -107,6 +107,37 @@ img {
 	Color changes in some parts of 
 	the website, in dark theme WEBSITE
 ==========*/
+.dark-theme :is(.shadow-header , .scrollup){
+  box-shadow: 0 2px 16px hsla(218, 68%, 4% 0.7);
+
+}
+.dark-theme .nav__menu{
+  box-shadow: 0 4px 16px hsla(218,68%, 4%, 0.7);
+}
+.dark-theme .prices__card{
+  background-color: var(--white-color);
+}
+.dark-theme .prices__item{
+  color: var(--gray-color);
+}
+
+.dark-theme ::-webkit-scrollbar {
+ background-color: hsl(218, 8%, 12%);
+}
+
+.dark-theme ::-webkit-scrollbar-track {
+  background-color: hsl(218, 8%, 20%); /* Track (background) color */
+  /* border-radius: 1rem; */
+}
+.dark-theme ::-webkit-scrollbar-thumb {
+  background-color: hsl(218, 8%, 20% ); /* Thumb color */
+  
+}
+.dark-theme ::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(218, 8%, 30%); /* Thumb color */
+  
+}
+
 
 
 /*=============== WEBSITE REUSABLE CSS CLASSES ===============*/
@@ -1255,9 +1286,9 @@ container{
   
 
 }
- /* .dark-theme .nav__menu {
+ .dark-theme .nav__menu {
     box-shadow: none;
-  } */
+  }
   
   /*Some change gonna be made to this code in the near future*/
   .home__container{

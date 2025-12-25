@@ -115,7 +115,67 @@ window.addEventListener('scroll', scrollActive)
 
 
 /*=============== WEBSITE DARK LIGHT THEME ===============*/ 
+const themeButton = document.getElementById('theme-button')
+const darkTheme = 'dark-theme'
+const iconTheme = 'ri-sun-fill'
 
+// Adding Selected topic (If user selected)
+const selectedTheme = localStorage.getItem('selected-theme')
+const selectedIcon = localStorage.getItem('selected-icon')
+
+// Obtaining the current theme that the interface has by validating the dark class
+const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
+const getCurrentIcon =  () => themeButton.classList.contains(iconTheme) ? 'ri-moon-fill"' : 'ri-sun-fill'
+
+// Validate if the user selected a topic
+if(selectedTheme){
+    // If the validation is fulfilled, we ask what the issue is obtianed
+    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
+    themeButton.classList[selectedIcon === 'ri-moon-fill"' ? 'add' : 'remove'](iconTheme)
+}
+// Activate / deactivate the theme manually with the button
+themeButton.addEventListener('click', () =>{
+   //Adding or removing the dark / icon theme
+   document.body.classList.toggle(darkTheme)
+   themeButton.classList.toggle(iconTheme)
+   
+   // Saving the theme and the current icon that the user choose
+   localStorage.setItem('selected-theme', getCurrentTheme())
+   localStorage.setItem('selected-icon', getCurrentIcon())
+})
 
 /*=============== WEBSITE SCROLL REVEAL ANIMATION ===============*/
+const scrollMenu = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2000,
+    reset:true, // Animation repeat
+
+
+})
+// Some Animation To Our Home__Content
+scrollMenu.reveal(' .home__content', {origin: 'bottom'})
+scrollMenu.reveal(' .home__info', {origin: 'bottom', delay: 800})
+scrollMenu.reveal(' .home__data', { delay: 1400})
+scrollMenu.reveal(' .home__button', {origin: 'left', delay: 1800})
+
+// Add some animation to our delivery__content
+scrollMenu.reveal(' .delivery__data', {origin: 'left'})
+scrollMenu.reveal(' .delivery__content', {origin: 'left', delay: 600})
+scrollMenu.reveal(' .delivery__img', {delay: 1800})
+
+//Adding some animation to our About page
+scrollMenu.reveal(' .about__data, .contact__map', {origin: 'left'})
+scrollMenu.reveal(' .about__img, .contact__data', {origin: 'right'})
+
+// Adding some animation to our conferences pages
+scrollMenu.reveal(' .prices__box', {origin: 'right'})
+scrollMenu.reveal(' .prices__swiper', {origin: 'bottom', delay: 600})
+
+// Some animation to our gallery
+scrollMenu.reveal(' .gallery__image', {interval: 100})
+
+//Some animation to our footer page
+scrollMenu.reveal(' .footer__container')
+
 
