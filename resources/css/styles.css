@@ -363,6 +363,19 @@ img {
 
 
 /*=============== Website HOME ===============*/
+/* ============ Some Added code for Backgroud Image ========= */
+.home {
+  background-image: url('https://images.pexels.com/photos/30018091/pexels-photo-30018091/free-photo-of-abstract-fluid-waves-in-dark-blue-3d-render.jpeg');
+  position: relative;
+  background-attachment: fixed; /* Core parallax effect */
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 8rem 0; /* Increased for taller hero */
+  min-height: 100vh; /* Full viewport height for dramatic effect */
+  overflow: hidden; /* Prevents scroll issues */
+}
+
 .home__container{
   display: grid;
   grid-template-columns: 1fr;
@@ -389,7 +402,7 @@ img {
 }
 
 .home__content {
-  background-color: var(--first-color);
+  /* background-color: var(--first-color); */
   padding: 3rem 1.5rem 0 1rem;
   border-radius: 4rem;
   box-shadow: 0 8px 16px hsla(218, 94%, 45%, 0.2); /* Fixed: added comma before opacity */
@@ -414,6 +427,12 @@ img {
   font-size: var(--h2-font-size);
   color:var(--white-color);
   margin-bottom: 0.5rem;
+}
+.home__title{
+  color:var(--white-color);
+}
+.home__description{
+  color: var(--white-color);
 }
 
 .home__profession{
