@@ -365,7 +365,7 @@ img {
 /*=============== Website HOME ===============*/
 /* ============ Some Added code for Backgroud Image ========= */
 .home {
-  background-image: url('https://images.pexels.com/photos/30018091/pexels-photo-30018091/free-photo-of-abstract-fluid-waves-in-dark-blue-3d-render.jpeg');
+  background-image: url('/resources/Img/backgroundImg1.jpg');
   position: relative;
   background-attachment: fixed; /* Core parallax effect */
   background-size: cover;
@@ -402,7 +402,7 @@ img {
 }
 
 .home__content {
-  /* background-color: var(--first-color); */
+  background-color: var(--first-color);
   padding: 3rem 1.5rem 0 1rem;
   border-radius: 4rem;
   box-shadow: 0 8px 16px hsla(218, 94%, 45%, 0.2); /* Fixed: added comma before opacity */
