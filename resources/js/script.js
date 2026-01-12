@@ -173,9 +173,9 @@ scrollMenu.reveal(' .prices__box', {origin: 'right'})
 scrollMenu.reveal(' .prices__swiper', {origin: 'bottom', delay: 100})
 
 // Some animation to our gallery
-scrollMenu.reveal(' .gallery__image', {interval: 20})
+// scrollMenu.reveal(' .gallery__image', {interval: 20})
 
 //Some animation to our footer page
-scrollMenu.reveal(' .footer__container')
+// scrollMenu.reveal(' .footer__container')
 
 
