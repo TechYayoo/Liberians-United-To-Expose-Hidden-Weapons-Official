@@ -155,14 +155,14 @@ const scrollMenu = ScrollReveal({
 })
 // Some Animation To Our Home__Content
 scrollMenu.reveal(' .home__content', {origin: 'bottom'})
-scrollMenu.reveal(' .home__info', {origin: 'bottom', delay: 800})
-scrollMenu.reveal(' .home__data', { delay: 1400})
-scrollMenu.reveal(' .home__button', {origin: 'left', delay: 1800})
+scrollMenu.reveal(' .home__info', {origin: 'bottom', delay: 100})
+scrollMenu.reveal(' .home__data', { delay: 140})
+scrollMenu.reveal(' .home__button', {origin: 'left', delay: 180})
 
 // Add some animation to our delivery__content
 scrollMenu.reveal(' .delivery__data', {origin: 'left'})
-scrollMenu.reveal(' .delivery__content', {origin: 'left', delay: 600})
-scrollMenu.reveal(' .delivery__img', {delay: 1800})
+scrollMenu.reveal(' .delivery__content', {origin: 'left', delay: 100})
+scrollMenu.reveal(' .delivery__img', {delay: 180})
 
 //Adding some animation to our About page
 scrollMenu.reveal(' .about__data, .contact__map', {origin: 'left'})
@@ -170,10 +170,10 @@ scrollMenu.reveal(' .about__img, .contact__data', {origin: 'right'})
 
 // Adding some animation to our conferences pages
 scrollMenu.reveal(' .prices__box', {origin: 'right'})
-scrollMenu.reveal(' .prices__swiper', {origin: 'bottom', delay: 600})
+scrollMenu.reveal(' .prices__swiper', {origin: 'bottom', delay: 100})
 
 // Some animation to our gallery
-scrollMenu.reveal(' .gallery__image', {interval: 100})
+scrollMenu.reveal(' .gallery__image', {interval: 20})
 
 //Some animation to our footer page
 scrollMenu.reveal(' .footer__container')
