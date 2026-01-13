@@ -165,8 +165,8 @@ scrollMenu.reveal(' .delivery__content', {origin: 'left', delay: 100})
 scrollMenu.reveal(' .delivery__img', {delay: 180})
 
 //Adding some animation to our About page
-scrollMenu.reveal(' .about__data, .contact__map', {origin: 'left'})
-scrollMenu.reveal(' .about__img, .contact__data', {origin: 'right'})
+// scrollMenu.reveal(' .about__data, .contact__map', {origin: 'left'})
+// scrollMenu.reveal(' .about__img, .contact__data', {origin: 'right'})
 
 // Adding some animation to our conferences pages
 scrollMenu.reveal(' .prices__box', {origin: 'right'})
