@@ -30,6 +30,7 @@ navLinks.forEach(link => {
     });
 });
 
+
 /***This changes background header */
 
 
@@ -165,8 +166,8 @@ scrollMenu.reveal(' .delivery__content', {origin: 'left', delay: 100})
 scrollMenu.reveal(' .delivery__img', {delay: 180})
 
 //Adding some animation to our About page
-// scrollMenu.reveal(' .about__data, .contact__map', {origin: 'left'})
-// scrollMenu.reveal(' .about__img, .contact__data', {origin: 'right'})
+scrollMenu.reveal(' .about__data, .contact__map', {origin: 'left'})
+scrollMenu.reveal(' .about__img, .contact__data', {origin: 'right'})
 
 // Adding some animation to our conferences pages
 scrollMenu.reveal(' .prices__box', {origin: 'right'})
@@ -177,5 +178,6 @@ scrollMenu.reveal(' .prices__swiper', {origin: 'bottom', delay: 100})
 
 //Some animation to our footer page
 // scrollMenu.reveal(' .footer__container')
+
 
 
